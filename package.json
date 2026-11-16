@@ -1,0 +1,30 @@
+{
+  "name": "food-delivery-platform",
+  "version": "1.0.0",
+  "description": "Fullstack microservices-based Food Delivery application",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "services/*"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:auth": "npm run dev --prefix services/auth",
+    "dev:restaurant": "npm run dev --prefix services/restaurant",
+    "dev:order": "npm run dev --prefix services/order",
+    "dev:gateway": "npm run dev --prefix services/gateway",
+    "build": "npm run build:services && npm run build:frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "build:services": "npm run build --prefix services/auth && npm run build --prefix services/restaurant && npm run build --prefix services/order && npm run build --prefix services/gateway"
+  },
+  "keywords": [
+    "food-delivery",
+    "microservices",
+    "react",
+    "express",
+    "typescript",
+    "mongodb"
+  ],
+  "author": "Neelesh Kumar",
+  "license": "ISC"
+}

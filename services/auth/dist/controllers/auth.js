@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../model/User.js";
+import User from "../models/User.js";
 const generateToken = (payload) => {
     const secret = process.env.JWT_SECRET || "default_jwt_secret_dev_key";
     const expiresIn = (process.env.JWT_EXPIRES_IN || "7d");

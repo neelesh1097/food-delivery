@@ -1,6 +1,6 @@
 import type { Response } from "express";
 import jwt from "jsonwebtoken";
-import User from "../model/User.js";
+import User from "../models/User.js";
 import type { AuthRequest, AuthUserPayload } from "../middleware/auth.js";
 
 const generateToken = (payload: AuthUserPayload): string => {
